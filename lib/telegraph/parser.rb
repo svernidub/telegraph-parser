@@ -1,5 +1,6 @@
 require "telegraph/parser/version"
-require "telegraph/parser/binding"
+require "telegraph/parser/errors"
+require "telegraph/parser/fetcher"
 require "telegraph/parser/parser"
 require "telegraph/parser/article"
 
