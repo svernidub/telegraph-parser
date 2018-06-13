@@ -5,7 +5,7 @@ module Telegraph
 
       attr_reader *ATTRIBUTES
 
-      def initialize(attributes)
+      def initialize(attributes, image_prefix: '')
         attributes.each do |attr, val|
           next unless ATTRIBUTES.include?(attr.to_sym)
           instance_variable_set(:"@#{attr}", val)
