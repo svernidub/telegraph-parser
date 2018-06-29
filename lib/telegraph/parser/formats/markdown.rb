@@ -1,4 +1,4 @@
-require 'html2markdown'
+require 'reverse_markdown'
 
 module Telegraph
   module Parser
@@ -12,13 +12,12 @@ module Telegraph
         protected
 
         def convert_to_md
-          @content = HTMLPage.new(contents: @content).markdown
+          @content = ReverseMarkdown.convert(@content)
         end
 
         def filename
           "#{@article.title}.md"
         end
-
       end
     end
   end

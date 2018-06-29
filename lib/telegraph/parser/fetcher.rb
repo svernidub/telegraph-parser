@@ -12,6 +12,7 @@ module Telegraph
       end
 
       def fetch_image(src, prefix)
+        src = src.start_with?('http') ? src : "http://#{HOST}#{src}"
         { image_id(src, prefix) => open(src).read }
       end
 
